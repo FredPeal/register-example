@@ -1,0 +1,20 @@
+{
+    "name": "frederickpenalo/register_products",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RegisterProducts\\App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FredPeal",
+            "email": "frederickpeal@gmail.com"
+        }
+    ],
+    "require": {
+        "robmorgan/phinx": "^0.16.7",
+        "bramus/router": "^1.6"
+    }
+}
