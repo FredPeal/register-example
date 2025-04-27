@@ -11,7 +11,9 @@
         <h2 class="text-2xl font-bold mb-4">Create Product</h2>
         <form class="space-y-4" method="POST" action=<?= !isset($product) ? "/products" : "/products/".$product['id'] ?>>
             <input type="text" name="name" value="<?=isset($product) ? $product['name'] : '' ?>" placeholder="Name" class="w-full p-2 border rounded-md" required>
-            <textarea name="description" placeholder="Description" class="w-full p-2 border rounded-md" required></textarea>
+            <textarea name="description" placeholder="Description" class="w-full p-2 border rounded-md" required>
+                <?=isset($product) ? $product['description']: '' ?>
+            </textarea>
             <input type="number" value="<?=isset($product) ? $product['price'] : '' ?>"   name="price" step="0.01" placeholder="Price" class="w-full p-2 border rounded-md" required>
             <input type="text" value="<?=isset($product) ? $product['brand'] : '' ?>"  name="brand" placeholder="Brand" class="w-full p-2 border rounded-md" required>
 
